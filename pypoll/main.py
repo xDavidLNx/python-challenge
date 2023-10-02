@@ -2,8 +2,7 @@ import csv
 import os
 
 csvpath = os.path.join('.','resources','election_data.csv')
-output_file = 'Results_poll.csv'
-results_path = os.path.join('.','analysis')
+results_path = os.path.join('.','analysis','Election_results.txt')
 
 #With opens file using the cvs module
 with open (csvpath, encoding = 'UTF-8') as dataset:
@@ -42,7 +41,7 @@ with open (csvpath, encoding = 'UTF-8') as dataset:
     print(win_percentage)
     print(winner)
 #Exports and string formats the results to a new txt file    
-with open('./analysis/Elections_results.txt', 'w') as exportdata:
+with open(results_path, 'w') as exportdata:
     exportdata.write("Election results\n\n")
     exportdata.write("---------------------------------------------\n\n")
     exportdata.write("Total votes : %d \n\n" % total_votes)

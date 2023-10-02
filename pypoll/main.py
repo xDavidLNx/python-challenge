@@ -34,12 +34,6 @@ with open (csvpath, encoding = 'UTF-8') as dataset:
         win_percentage[x] = (votes[x]/total_votes) * 100
         
     winner = max(win_percentage,key=win_percentage.get) #gets the max win percentage from the dictionary, from that it gets the paired name 
-    # debugging print
-    #print(f'Total votes cast: {total_votes}')
-    #print(unique_candidates)
-    #print(votes)
-    #print(win_percentage)
-    #print(winner)
 
     #Terminal
     print("Election results\n\n")

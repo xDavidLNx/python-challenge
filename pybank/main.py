@@ -47,7 +47,7 @@ with open (csvpath, encoding = 'UTF-8') as dataset:
     print(f'Greatest decrease in profits: {dec_month} (${min_change})')
 
 #Exports and string formats the results to a new csv file
-with open('./analysis/Results.csv', 'w') as exportdata:
+with open('./analysis/Results.txt', 'w') as exportdata:
     exportdata.write("Financial Analysis\n")
     exportdata.write("-------------------------------------------------\n")
     exportdata.write("Total Months: %d\n" % total_months)

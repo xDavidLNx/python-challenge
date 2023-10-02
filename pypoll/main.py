@@ -35,11 +35,25 @@ with open (csvpath, encoding = 'UTF-8') as dataset:
         
     winner = max(win_percentage,key=win_percentage.get) #gets the max win percentage from the dictionary, from that it gets the paired name 
     # debugging print
-    print(f'Total votes cast: {total_votes}')
-    print(unique_candidates)
-    print(votes)
-    print(win_percentage)
-    print(winner)
+    #print(f'Total votes cast: {total_votes}')
+    #print(unique_candidates)
+    #print(votes)
+    #print(win_percentage)
+    #print(winner)
+
+    #Terminal
+    print("Election results\n\n")
+    print("---------------------------------------------\n\n")
+    print("Total votes : %d \n\n" % total_votes)
+    print("---------------------------------------------\n\n")
+    
+    # iterates on the votes and win_percentage dictionaries to display any candidates and information stored in said dictionaries 
+    for key, value in votes.items():
+        candidate_results = (f'{key}: {win_percentage[key]:.3f}% ({value:,})\n')
+        print(candidate_results)
+    print("\n---------------------------------------------\n")
+    print("\n Winner: %s" % winner)
+    
 #Exports and string formats the results to a new txt file    
 with open(results_path, 'w') as exportdata:
     exportdata.write("Election results\n\n")

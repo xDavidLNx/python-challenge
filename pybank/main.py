@@ -1,7 +1,7 @@
 import csv 
 import os
 #csv path makes an object from the path of the file
-csvpath = os.path.join('.','starter_code','pybank','resources','budget_data.csv')
+csvpath = os.path.join('.','resources','budget_data.csv')
 #with open ('./starter_code/pybank/resources/budget_data.csv') as dataset:
 
 #With opens file using the cvs module
